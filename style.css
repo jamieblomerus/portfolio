@@ -1,0 +1,321 @@
+/* CSS Mini Reset */
+html, body, div, form, fieldset, legend, label { margin: 0; padding: 0;  }
+table { border-collapse: collapse; border-spacing: 0; }
+th, td { text-align: left; vertical-align: top; }
+h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
+img { border: 0; }
+
+/* Fonts */
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+/* Site styles */
+
+html {
+	font-family: "Montserrat", "Helvetica Neue", sans-serif;
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
+	overflow-y: scroll;
+
+	/* Hide scrollbar */
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+
+html::-webkit-scrollbar {
+	/* Hide scrollbar */
+	display: none; /* Chrome, Safari and Opera */
+}
+
+body {
+	background: rgb(15, 15, 16);
+	color: white;
+}
+
+.snap-container {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	max-width:100%;
+	scroll-snap-align: start;
+	overflow: hidden;
+}
+
+.snap-container .content {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.snap-container .content .container {
+	width: 50%;
+	margin: 20px
+}
+
+.js-warning {
+	position: absolute;
+	left: 50%;
+	transform: translatex(-50%);
+	text-align: center;
+}
+
+header {
+	display: flex;
+	width: 100vw;
+	max-width: 100%;
+}
+
+header .row {
+	display: flex;
+	width: 100%;
+}
+
+header .row .container {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header .image-container {
+	border: 4px solid white;
+	max-width: fit-content;
+	height: fit-content;
+}
+
+header .image-container img {
+	transform: translate(-10%, -5%);
+	width: 100%;
+}
+
+.site-title {
+	font-size: 5rem;
+	font-weight: 700;
+	line-height: 1.1;
+	margin: 0;
+	text-transform: uppercase;
+}
+.site-description {
+	font-size: 1.2em;
+	font-weight: 400;
+	line-height: 1.1;
+	margin-top: 0;
+	margin-right: 20px;
+	text-align: right;
+}
+
+.scroll {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: white;
+}
+
+#pastprojects h2 {
+	text-align: center;
+	font-size: 3rem;
+	font-weight: 500;
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+#pastprojects .description {
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: 300;
+}
+
+#pastprojects .grid-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	padding: 10px;
+	margin-top: 30px;
+}
+
+#pastprojects .grid-container .item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#pastprojects .grid-container .project {
+	position: relative;
+	width: 20vw;
+	height: 70vh;
+	background: rgb(26, 26, 27);
+	border: 1px solid black;
+	border-radius: 15px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+#pastprojects .grid-container .project .project-image img {
+	width: 100%;
+	height: auto;
+	background: rgb(26, 26, 27);
+	border-radius: 15px 15px 0 0;
+	margin-bottom: 10px;
+}
+
+#pastprojects .grid-container .project .project-title {
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin: 0 10px 0 10px;
+}
+
+#pastprojects .grid-container .project .project-description {
+	padding-bottom: 15%;
+}
+
+#pastprojects .grid-container .project button {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: rgb(40, 40, 42);
+	border: 1px solid black;
+	border-radius: 0 0 15px 15px;
+	color: white;
+	font-size: 1.2rem;
+	font-weight: 500;
+	padding: 10px;
+	width: 100%;
+	max-height: 15%;
+}
+
+#pastprojects .grid-container .project button:hover {
+	background: rgb(50, 50, 52);
+}
+
+#about-me h2, #certifications h2 {
+	font-size: 2rem;
+	font-weight: 500;
+	margin-bottom: 0;
+}
+
+#about-me .description {
+	font-size: 1rem;
+	font-weight: 400;
+	padding-left: 5px;
+}
+
+#about-me .content .container:first-child {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+}
+
+#about-me .image-container {
+	border: 4px solid white;
+	border-radius: 50%;
+	max-width: fit-content;
+	height: fit-content;
+	position: relative;
+}
+
+#about-me .image-container img {
+	width: 100%;
+	border-radius: 50%;
+}
+
+#about-me .image-container .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(26, 26, 27, 0.515);
+	border-radius: 50%;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+#about-me .image-container .overlay a {
+	color: white;
+	font-size: 3rem;
+}
+#about-me .image-container:hover div {
+	display: flex;
+}
+
+#certifications .description {
+	font-size: 1.1rem;
+	font-weight: 400;
+	padding-left: 10px;
+}
+
+#certifications .content .container .collapsible {
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+}
+
+#certifications .content .container .active, .collapsible:hover {
+	background-color: #ccc;
+}
+
+#certifications .content .container .collapsible-content {
+	padding: 0 18px;
+	background-color: rgb(26, 26, 27);
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+footer {
+	background-color: rgb(29, 29, 30);
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%230f0f10%3B%7D.cls-2%7Bfill:%231d1d1e%3B%7D%3C/style%3E%3C/defs%3E%3Crect class='cls-2' width='1920' height='1080'/%3E%3Cpath class='cls-1' d='M0 153.42s416.47-144.08 982.99 0 937.01 0 937.01 0V0H0V153.42Z'/%3E%3C/svg%3E");
+	background-repeat: repeat-x;
+}
+
+
+@media only screen and (max-width: 1000px) {
+	header .row {
+		align-self: center;
+		flex-direction: column-reverse;
+	}
+	header .row .container {
+		width: 100%;
+		margin: 10px;
+		text-align: center;
+		align-items: flex-start;
+	}
+	.site-title {
+		font-size: 3rem;
+	}
+	.image-container {
+		width: 50%;
+	}
+	#pastprojects {
+		overflow: scroll;
+	}
+	#pastprojects h2 {
+		font-size: 2rem;
+	}
+	#pastprojects .description {
+		margin: 0 20px 0 20px;
+	}
+	#pastprojects .grid-container {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+	}
+	#pastprojects .grid-container .project {
+		width: 80vw;
+		height: max-content;
+	}
+}
