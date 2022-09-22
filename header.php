@@ -37,7 +37,7 @@
 					$namesplit = explode(" ", get_bloginfo( 'name' ));
 					if ( is_front_page() ) :
 						?>
-						<h1 class="site-title"><?php echo $namesplit[0] ?><br><?php echo $namesplit[1] ?></h1>
+						<h1 class="site-title"><span class="fname"><?php echo $namesplit[0] ?></span><br><span class="lname"><?php echo $namesplit[1] ?></span></h1>
 						<?php
 					else :
 						?>

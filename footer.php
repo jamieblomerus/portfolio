@@ -10,22 +10,19 @@
  */
 
 ?>
-<footer id="contact" class="snap-container">
+<footer class="snap-container">
     <div class="content">
-        <div class="container">
-            <h2>Contact me:</h2>
-            <p class="description">
-				<i class="fa fa-phone"></i> <a href="tel:+46735004889">+46 (0) 73-500 48 89</a><br>
-				<i class="fa fa-envelope"></i> <a href="mailto:jamie.blomerus@protonmail.com">jamie.blomerus@protonmail.com</a><br>
-				<br>
-				<i class="fa fa-telegram"></i> <a href="https://t.me/trulypain" target="_blank">Telegram</a><br>
-				<i class="fa fa-linkedin"></i> <a href="https://www.linkedin.com/in/bunny-blomerus/" target="_blank">LinkedIn</a><br>
-				<i class="fa fa-github"></i> <a href="https://github.com/TrulyPain" target="_blank">GitHub</a><br>
-			</p>
+        <div class="contact-form">
+            <h2>Send me a message</h2>
+			<p>Got a question or proposal, or wanna say hi? Send me a message and I'll get back to you as soon as possible.</p>
+			<?php get_sidebar( 'footer-cf' ); ?>
         </div>
-		<div class="container">
-	</div>
     </div>
+	<div class="footerbar">
+		<p class="email">Email me at: <a href="mailto:jamie.blomerus@protonmail.com">jamie.blomerus@protonmail.com</a></p>
+		<p class="copyright">© <?php echo date("Y"); ?> Jamie Blomerus, All rights reserved.</p>
+		<p class="phone">Call me at: <a href="tel:+46735004889">+46 (0) 73 500 48 89</a></p>
+	</div>
 </footer>
 
 

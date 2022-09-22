@@ -107,11 +107,11 @@ add_action( 'after_setup_theme', 'portfolio_content_width', 0 );
 function portfolio_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'portfolio' ),
-			'id'            => 'sidebar-1',
+			'name'          => esc_html__( 'Footer contact form', 'portfolio' ),
+			'id'            => 'footer-cf',
 			'description'   => esc_html__( 'Add widgets here.', 'portfolio' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
+			'before_widget' => '',
+			'after_widget'  => '',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
 		)
@@ -123,10 +123,8 @@ add_action( 'widgets_init', 'portfolio_widgets_init' );
  * Enqueue scripts and styles.
  */
 function portfolio_scripts() {
-	wp_enqueue_style( 'portfolio-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'portfolio-style', get_template_directory_uri(). '/style.min.css', array(), _S_VERSION );
 	wp_style_add_data( 'portfolio-style', 'rtl', 'replace' );
-	
-	wp_enqueue_script( 'basicScroll-js', get_template_directory_uri() . '/js/basicScroll.min.js', array(), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

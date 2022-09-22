@@ -40,7 +40,7 @@ include 'header.php';
 				?>
 				<img src="<?php echo $image ?>" alt="">
                 <div class="overlay">
-                    <a href="https://www.linkedin.com/in/jamie-blomerus-1b1b4b1b1/" title="Check out my LinkedIn profile" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://github.com/jamieblomerus" title="Check out my GitHub profile" target="_blank"><i class="fa fa-github"></i></a>
                 </div>
 			</div>
         </div>

@@ -98,6 +98,21 @@ header .image-container img {
 	margin: 0;
 	text-transform: uppercase;
 }
+
+.site-title span {
+	display: inline-block;
+	opacity: 0;
+	filter: blur(4px);
+}
+
+.site-title .fname {
+	animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.site-title .lname {
+	animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
 .site-description {
 	font-size: 1.2em;
 	font-weight: 400;
@@ -105,6 +120,11 @@ header .image-container img {
 	margin-top: 0;
 	margin-right: 20px;
 	text-align: right;
+	transform: translateY(-100%);
+	opacity: 0;
+	filter: blur(2px);
+
+	animation: fall-down 0.4s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 .scroll {
@@ -241,7 +261,7 @@ header .image-container img {
 
 #about-me .image-container .overlay a {
 	color: white;
-	font-size: 3rem;
+	font-size: 5rem;
 }
 #about-me .image-container:hover div {
 	display: flex;
@@ -279,12 +299,116 @@ header .image-container img {
 
 footer {
 	background-color: rgb(29, 29, 30);
-	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%230f0f10%3B%7D.cls-2%7Bfill:%231d1d1e%3B%7D%3C/style%3E%3C/defs%3E%3Crect class='cls-2' width='1920' height='1080'/%3E%3Cpath class='cls-1' d='M0 153.42s416.47-144.08 982.99 0 937.01 0 937.01 0V0H0V153.42Z'/%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIwIDEwODAiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMGYwZjEwO30uY2xzLTJ7ZmlsbDojMWQxZDFlO308L3N0eWxlPjwvZGVmcz48cmVjdCBjbGFzcz0iY2xzLTIiIHdpZHRoPSIxOTIwIiBoZWlnaHQ9IjEwODAiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0wLDkzLjIyczQxNi40Ny0xMzMuNTksOTgyLjk5LDBjNTY2LjUyLDEzMy41OSw5MzcuMDEsMCw5MzcuMDEsMFYtNDkuMDJIMFY5My4yMloiLz48L3N2Zz4=");
 	background-repeat: repeat-x;
+	display: flex;
+	justify-content: center;
+}
+
+footer .content {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 20px 0;
+}
+
+footer h2 {
+	font-size: 2rem;
+	font-weight: 500;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+footer form {
+	width: 90%;
+}
+
+footer form p label {
+	font-size: 1.1rem;
+	font-weight: 200;
+}
+
+footer form p input {
+	width: 100%;
+	padding: 10px;
+	background: none;
+	border: 2px solid rgb(224, 224, 224);
+	border-radius: 5px;
+}
+
+footer form p input:focus {
+	outline: none;
+	border: 3px solid rgb(224, 224, 224);
+}
+
+footer form p textarea {
+	width: 100%;
+	height: 15vh;
+	resize: none;
+	padding: 10px;
+	background: none;
+	border: 2px solid rgb(224, 224, 224);
+	border-radius: 5px;
+}
+
+footer form p textarea:focus {
+	outline: none;
+	border: 3px solid rgb(224, 224, 224);
+}
+
+footer form .wpcf7-not-valid-tip {
+	font-size: 0.8rem;
+}
+
+footer form p input[type="submit"] {
+	background: rgb(40, 40, 42);
+	border: 1px solid black;
+	border-radius: 5px;
+	color: white;
+	font-size: 1.2rem;
+	font-weight: 500;
+	padding: 10px;
+	width: 100%;
+	max-height: 15%;
+}
+
+footer form p input[type="submit"]:hover {
+	background: rgb(50, 50, 52);
+}
+
+footer form .wpcf7-response-output {
+	display: none;
+}
+
+footer .footerbar {
+	position: absolute;
+	bottom: 0;
+	background: rgb(40, 40, 42);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+footer .footerbar .copyright {
+	font-weight: 300;
+}
+
+footer .footerbar .email {
+	position: absolute;
+	left: 20px;
+}
+
+footer .footerbar .phone {
+	position: absolute;
+	right: 20px;
 }
 
 
 @media only screen and (max-width: 1000px) {
+	.snap-container .content .container {
+		width: 100%;
+		margin: 0;
+	}
 	header .row {
 		align-self: center;
 		flex-direction: column-reverse;
@@ -317,5 +441,49 @@ footer {
 	#pastprojects .grid-container .project {
 		width: 80vw;
 		height: max-content;
+		margin-bottom: 10px;
+	}
+	#about-me .content, #certifications .content {
+		margin-top: 50px;
+		flex-direction: column;
+	}
+	#about-me .content .container .image-container {
+		width: 50vw;
+	}
+	footer .content {
+		width: 90%;
+	}
+	footer .footerbar .email, footer .footerbar .phone {
+		display: none;
+	}
+}
+
+/* Disable animations if user requests it */
+@media prefers-reduced-motion {
+	.site-title span {
+		opacity: 1;
+		filter: blur(0);
+	}
+
+	.site-description {
+		transform: translateY(0);
+		opacity: 1;
+		filter: blur(0);
+	}
+}
+
+/* Animations */
+@keyframes fade-in {
+	100% {
+	  opacity: 1;
+	  filter: blur(0);
+	}
+}
+
+@keyframes fall-down {
+	100% {
+	  transform: translateY(0);
+	  opacity: 1;
+	  filter: blur(0);
 	}
 }
