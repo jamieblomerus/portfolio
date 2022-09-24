@@ -18,7 +18,6 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<meta name="author" content="<?php get_bloginfo('name') ?>">
 	<script src="https://use.fontawesome.com/c3610b5102.js"></script>
-	<script src="<?php echo get_template_directory_uri() . '/js/frontend.js' ?>" async></script>
 
 	<?php wp_head(); ?>
 </head>
@@ -26,7 +25,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<header id="start" class="snap-container">
+	<header data-anchor="home" class="home section">
 		<noscript><p class="js-warning">It seems like you have JavaScript disabled. This site requires JavaScript to work properly. Please enable JavaScript in your browser settings.</p></noscript>
 		<div class="row">
 			<div class="container">

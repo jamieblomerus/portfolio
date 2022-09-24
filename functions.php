@@ -124,6 +124,7 @@ add_action( 'widgets_init', 'portfolio_widgets_init' );
  */
 function portfolio_scripts() {
 	wp_enqueue_style( 'portfolio-style', get_template_directory_uri(). '/style.css', array(), _S_VERSION );
+	wp_enqueue_script( 'portfolio-script', get_template_directory_uri(). '/js/frontend.js', array(), _S_VERSION, true );
 	wp_style_add_data( 'portfolio-style', 'rtl', 'replace' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

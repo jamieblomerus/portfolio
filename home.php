@@ -3,7 +3,7 @@
 // Template name: Static Front Page
 include 'header.php';
 ?>
-<div id="pastprojects" class="snap-container">
+<div data-anchor="pastprojects" class="pastprojects section">
     <h2>My past projects:</h2>
     <p class="description">Here are some of my past projects I have been working on lately. Perhaps your project will be here too one day :).</p>
     <div class="grid-container">
@@ -27,7 +27,7 @@ include 'header.php';
         ?>
     </div>
 </div>
-<div id="about-me" class="snap-container">
+<div data-anchor="about-me" class="about-me section">
     <div class="content">
         <div class="container">
             <div class="image-container">
@@ -52,7 +52,7 @@ include 'header.php';
         </div>
     </div>
 </div>
-<div id="certifications" class="snap-container">
+<div data-anchor="certifications" class="certifications section">
     <div class="content">
         <div class="container">
             <h2>My certifications:</h2>

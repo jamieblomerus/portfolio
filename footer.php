@@ -10,7 +10,7 @@
  */
 
 ?>
-<footer class="snap-container">
+<footer data-anchor="contact" class="section">
     <div class="content">
         <div class="contact-form">
             <h2>Send me a message</h2>

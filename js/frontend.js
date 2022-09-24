@@ -1,3 +1,8 @@
+new fullpage('#page', {
+  //options here
+  autoScrolling:true,
+});
+
 // Cursor
 document.body.onmousemove = function(e) {
   document.documentElement.style.setProperty (

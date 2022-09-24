@@ -21,18 +21,7 @@ img { border: 0; }
 
 html {
 	font-family: "Montserrat", "Helvetica Neue", sans-serif;
-	scroll-snap-type: y mandatory;
-	scroll-behavior: smooth;
 	overflow-y: scroll;
-
-	/* Hide scrollbar */
-	-ms-overflow-style: none;  /* IE and Edge */
-	scrollbar-width: none;  /* Firefox */
-}
-
-html::-webkit-scrollbar {
-	/* Hide scrollbar */
-	display: none; /* Chrome, Safari and Opera */
 }
 
 body {
@@ -40,24 +29,15 @@ body {
 	color: white;
 }
 
-.snap-container {
-	position: relative;
-	width: 100vw;
-	height: 100vh;
-	max-width:100%;
-	scroll-snap-align: start;
-	overflow: hidden;
-}
-
-.snap-container .content {
+.section .content {
 	display: flex;
 	align-items: center;
 	height: 100%;
 }
 
-.snap-container .content .container {
+.section .content .container {
 	width: 50%;
-	margin: 20px
+	margin: 20px;
 }
 
 .js-warning {
@@ -147,7 +127,7 @@ header .image-container img {
 	color: white;
 }
 
-#pastprojects h2 {
+.pastprojects h2 {
 	text-align: center;
 	font-size: 3rem;
 	font-weight: 500;
@@ -155,27 +135,26 @@ header .image-container img {
 	margin-bottom: 0;
 }
 
-#pastprojects .description {
+.pastprojects .description {
 	text-align: center;
 	font-size: 1.2rem;
 	font-weight: 300;
 }
 
-#pastprojects .grid-container {
+.pastprojects .grid-container {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(4, 1fr);
 	padding: 10px;
-	margin-top: 30px;
+	margin-top: 15px;
 }
 
-#pastprojects .grid-container .item {
+.pastprojects .grid-container .item {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-#pastprojects .grid-container .project {
+.pastprojects .grid-container .project {
 	position: relative;
 	width: 20vw;
 	height: 70vh;
@@ -187,7 +166,7 @@ header .image-container img {
 	flex-direction: column;
 }
 
-#pastprojects .grid-container .project .project-image img {
+.pastprojects .grid-container .project .project-image img {
 	width: 100%;
 	height: auto;
 	background: rgb(26, 26, 27);
@@ -195,17 +174,17 @@ header .image-container img {
 	margin-bottom: 10px;
 }
 
-#pastprojects .grid-container .project .project-title {
+.pastprojects .grid-container .project .project-title {
 	font-size: 1.5rem;
 	font-weight: 500;
 	margin: 0 10px 0 10px;
 }
 
-#pastprojects .grid-container .project .project-description {
+.pastprojects .grid-container .project .project-description {
 	padding-bottom: 15%;
 }
 
-#pastprojects .grid-container .project button {
+.pastprojects .grid-container .project button {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -220,29 +199,29 @@ header .image-container img {
 	max-height: 15%;
 }
 
-#pastprojects .grid-container .project button:hover {
+.pastprojects .grid-container .project button:hover {
 	background: rgb(50, 50, 52);
 }
 
-#about-me h2, #certifications h2 {
+.about-me h2, .certifications h2 {
 	font-size: 2rem;
 	font-weight: 500;
 	margin-bottom: 0;
 }
 
-#about-me .description {
+.about-me .description {
 	font-size: 1rem;
 	font-weight: 400;
 	padding-left: 5px;
 }
 
-#about-me .content .container:first-child {
+.about-me .content .container:first-child {
 	width: 50%;
 	display: flex;
 	justify-content: center;
 }
 
-#about-me .image-container {
+.about-me .image-container {
 	border: 4px solid white;
 	border-radius: 50%;
 	max-width: fit-content;
@@ -250,12 +229,12 @@ header .image-container img {
 	position: relative;
 }
 
-#about-me .image-container img {
+.about-me .image-container img {
 	width: 100%;
 	border-radius: 50%;
 }
 
-#about-me .image-container .overlay {
+.about-me .image-container .overlay {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -268,21 +247,21 @@ header .image-container img {
 	align-items: center;
 }
 
-#about-me .image-container .overlay a {
+.about-me .image-container .overlay a {
 	color: white;
 	font-size: 5rem;
 }
-#about-me .image-container:hover div {
+.about-me .image-container:hover div {
 	display: flex;
 }
 
-#certifications .description {
+.certifications .description {
 	font-size: 1.1rem;
 	font-weight: 400;
 	padding-left: 10px;
 }
 
-#certifications .content .container .collapsible {
+.certifications .content .container .collapsible {
 	position: relative;
 	background-color: #eee;
 	color: #444;
@@ -295,16 +274,16 @@ header .image-container img {
 	font-size: 15px;
 }
 
-#certifications .content .container .active, .collapsible:hover {
+.certifications .content .container .active, .collapsible:hover {
 	background-color: #ccc;
 }
 
-#certifications .content .container .collapsible .fa {
+.certifications .content .container .collapsible .fa {
 	position: absolute;
 	right: 20px;
 }
 
-#certifications .content .container .collapsible-content {
+.certifications .content .container .collapsible-content {
 	padding: 0 18px;
 	background-color: rgb(26, 26, 27);
 	max-height: 0;
@@ -324,7 +303,6 @@ footer .content {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	padding: 20px 0;
 }
 
 footer h2 {
@@ -424,7 +402,11 @@ footer .footerbar .phone a, footer .footerbar .email a {
 
 
 @media only screen and (max-width: 1000px) {
-	.snap-container .content .container {
+	.section .content {
+		width: 90%;
+		margin-left: 5%;
+	}
+	.section .content .container {
 		width: 100%;
 		margin: 0;
 	}
@@ -444,33 +426,37 @@ footer .footerbar .phone a, footer .footerbar .email a {
 	.image-container {
 		width: 50%;
 	}
-	#pastprojects {
+	.pastprojects {
 		overflow: scroll;
 	}
-	#pastprojects h2 {
+	.pastprojects h2 {
 		font-size: 2rem;
 	}
-	#pastprojects .description {
+	.pastprojects .description {
 		margin: 0 20px 0 20px;
 	}
-	#pastprojects .grid-container {
+	.pastprojects .grid-container {
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr;
 	}
-	#pastprojects .grid-container .project {
+	.pastprojects .grid-container .project {
 		width: 80vw;
 		height: max-content;
 		margin-bottom: 10px;
 	}
-	#about-me .content, #certifications .content {
+	.about-me .content, .certifications .content {
 		margin-top: 50px;
 		flex-direction: column;
 	}
-	#about-me .content .container .image-container {
+	.about-me .content .container .image-container {
 		width: 50vw;
+	}
+	.certifications .content {
+		margin-bottom: 30px;
 	}
 	footer .content {
 		width: 90%;
+		margin-left: 5%;
 	}
 	footer .footerbar {
 		display: block;
@@ -484,12 +470,12 @@ footer .footerbar .phone a, footer .footerbar .email a {
 	}
 }
 @media only screen and (max-height: 700px) {
-	#pastprojects .grid-container .project .project-description {
+	.pastprojects .grid-container .project .project-description {
 		font-size: 90%;
 	}
 }
 @media only screen and (max-height: 650px) {
-	#pastprojects .grid-container .project .project-description {
+	.pastprojects .grid-container .project .project-description {
 		font-size: 85%;
 	}
 }
