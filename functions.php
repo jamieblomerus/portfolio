@@ -123,12 +123,16 @@ add_action( 'widgets_init', 'portfolio_widgets_init' );
  * Enqueue scripts and styles.
  */
 function portfolio_scripts() {
-	wp_enqueue_style( 'portfolio-style', get_template_directory_uri(). '/style.min.css', array(), _S_VERSION );
+	wp_enqueue_style( 'portfolio-style', get_template_directory_uri(). '/style.css', array(), _S_VERSION );
 	wp_style_add_data( 'portfolio-style', 'rtl', 'replace' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// Fullpage.js
+	wp_enqueue_style( 'fullpagejs', get_template_directory_uri(). '/assets/css/fullpage.min.css', array(), '4.0.11' );
+	wp_enqueue_script( 'fullpagejs', get_template_directory_uri(). '/assets/js/fullpage.min.js', array(), '4.0.11', false );
 }
 add_action( 'wp_enqueue_scripts', 'portfolio_scripts' );
 

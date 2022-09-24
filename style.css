@@ -1,3 +1,8 @@
+/*
+Theme Name: Custom Portfolio Theme
+Author: Jamie Blomerus
+*/
+
 /* CSS Mini Reset */
 html, body, div, form, fieldset, legend, label { margin: 0; padding: 0;  }
 table { border-collapse: collapse; border-spacing: 0; }
@@ -81,14 +86,18 @@ header .row .container {
 }
 
 header .image-container {
-	border: 4px solid white;
+	border: 0px solid white;
 	max-width: fit-content;
 	height: fit-content;
+
+	animation: header-image-container-reveal 0.5s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 header .image-container img {
-	transform: translate(-10%, -5%);
+	transform: translate(0%, 0%);
 	width: 100%;
+
+	animation: header-image-reveal 0.5s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 .site-title {
@@ -274,6 +283,7 @@ header .image-container img {
 }
 
 #certifications .content .container .collapsible {
+	position: relative;
 	background-color: #eee;
 	color: #444;
 	cursor: pointer;
@@ -287,6 +297,11 @@ header .image-container img {
 
 #certifications .content .container .active, .collapsible:hover {
 	background-color: #ccc;
+}
+
+#certifications .content .container .collapsible .fa {
+	position: absolute;
+	right: 20px;
 }
 
 #certifications .content .container .collapsible-content {
@@ -403,6 +418,10 @@ footer .footerbar .phone {
 	right: 20px;
 }
 
+footer .footerbar .phone a, footer .footerbar .email a {
+	color: rgb(245, 245, 245);
+}
+
 
 @media only screen and (max-width: 1000px) {
 	.snap-container .content .container {
@@ -453,8 +472,25 @@ footer .footerbar .phone {
 	footer .content {
 		width: 90%;
 	}
+	footer .footerbar {
+		display: block;
+		text-align: center;
+	}
 	footer .footerbar .email, footer .footerbar .phone {
-		display: none;
+		position: relative;
+		left: auto;
+		right: auto;
+		font-size: small;
+	}
+}
+@media only screen and (max-height: 700px) {
+	#pastprojects .grid-container .project .project-description {
+		font-size: 90%;
+	}
+}
+@media only screen and (max-height: 650px) {
+	#pastprojects .grid-container .project .project-description {
+		font-size: 85%;
 	}
 }
 
@@ -474,6 +510,7 @@ footer .footerbar .phone {
 
 /* Animations */
 @keyframes fade-in {
+	/* For site-title */
 	100% {
 	  opacity: 1;
 	  filter: blur(0);
@@ -481,9 +518,23 @@ footer .footerbar .phone {
 }
 
 @keyframes fall-down {
+	/* For site-description */
 	100% {
 	  transform: translateY(0);
 	  opacity: 1;
 	  filter: blur(0);
+	}
+}
+
+@keyframes header-image-reveal {
+	/* For header image */
+	100% {
+		transform: translate(-10%, -5%);
+	}
+}
+
+@keyframes header-image-container-reveal {
+	100% {
+		border: 4px solid white;
 	}
 }

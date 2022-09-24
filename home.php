@@ -62,7 +62,7 @@ include 'header.php';
             <?php
             foreach ($certifications as $certification_item) {
                 ?>
-                <button type="button" class="collapsible"><?php echo esc_html__($certification_item['title']) ?></button>
+                <button type="button" class="collapsible"><?php echo esc_html__($certification_item['title']) ?><i class="fa fa-chevron-down"></i></button>
                 <div class="collapsible-content">
                     <p><?php echo $certification_item['description'] ?></p>
                 </div>

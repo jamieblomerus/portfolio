@@ -41,7 +41,7 @@
 						<?php
 					else :
 						?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="fname"><?php echo $namesplit[0] ?></span><br><span class="lname"><?php echo $namesplit[1] ?></span></a></p>
 						<?php
 					endif;
 					$portfolio_description = get_bloginfo( 'description', 'display' );
