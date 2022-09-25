@@ -17,16 +17,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,  user-scalable=no">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<meta name="author" content="<?php get_bloginfo('name') ?>">
-	<script src="https://use.fontawesome.com/c3610b5102.js"></script>
 
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<noscript><h2 class="js-warning">It seems like you have JavaScript disabled. This site requires JavaScript to work properly. Please enable JavaScript in your browser settings.</h2></noscript>
 <div id="page" class="site">
+	<? if (!is_front_page()): ?>
+		<header class="smallheader">
+			<p><a href="<?php echo get_home_url(); ?>"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back to home</a></p>
+		</header>
+	<? else: ?>
 	<header data-anchor="home" class="home section">
-		<noscript><p class="js-warning">It seems like you have JavaScript disabled. This site requires JavaScript to work properly. Please enable JavaScript in your browser settings.</p></noscript>
+		<p class="open-source"><a href="https://github.com/jamieblomerus/portfolio" title="This site is open source under GPLv3.">Source code</a></p>
 		<div class="row">
 			<div class="container">
 				<div class="site-branding">
@@ -34,15 +39,9 @@
 					the_custom_logo();
 
 					$namesplit = explode(" ", get_bloginfo( 'name' ));
-					if ( is_front_page() ) :
-						?>
-						<h1 class="site-title"><span class="fname"><?php echo $namesplit[0] ?></span><br><span class="lname"><?php echo $namesplit[1] ?></span></h1>
-						<?php
-					else :
-						?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="fname"><?php echo $namesplit[0] ?></span><br><span class="lname"><?php echo $namesplit[1] ?></span></a></p>
-						<?php
-					endif;
+					?>
+					<h1 class="site-title"><span class="fname"><?php echo $namesplit[0] ?></span><br><span class="lname"><?php echo $namesplit[1] ?></span></h1>
+					<?php
 					$portfolio_description = get_bloginfo( 'description', 'display' );
 					if ( $portfolio_description || is_customize_preview() ) :
 						?>
@@ -65,3 +64,4 @@
 		</div>
 		<p class="scroll">Scroll down<br><i class="fa fa-chevron-down"></i></p>
 	</header><!-- #masthead -->
+	<? endif; ?>

@@ -1,23 +1,14 @@
-new fullpage('#page', {
-  //options here
-  autoScrolling:true,
-});
-
-// Cursor
-document.body.onmousemove = function(e) {
-  document.documentElement.style.setProperty (
-    '--x', (
-      e.clientX+window.scrollX
-    )
-    + 'px'
-  );
-  document.documentElement.style.setProperty (
-    '--y', (
-      e.clientY+window.scrollY
-    ) 
-    + 'px'
-  );
+var useSnap = document.getElementsByClassName('section');
+if(useSnap.length > 0) {
+  new fullpage('#page', {
+    //options here
+    autoScrolling:true,
+    licenseKey: 'gplv3-license',
+  });
 }
+
+//Make page visible if javascript is enabled
+document.getElementById('page').style.display = 'block';
 
 // Visit project button
 function visit_project(button) {

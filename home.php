@@ -73,4 +73,6 @@ include 'header.php';
     </div>
 </div>
 <?php
-get_footer();
+if(!isset($skip_footer)) {
+    get_footer();
+}

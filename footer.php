@@ -10,6 +10,7 @@
  */
 
 ?>
+<? if (is_front_page()): ?>
 <footer data-anchor="contact" class="section">
     <div class="content">
         <div class="contact-form">
@@ -18,6 +19,9 @@
 			<?php get_sidebar( 'footer-cf' ); ?>
         </div>
     </div>
+<? else: ?>
+<footer class="smallfooter">
+<? endif; ?>
 	<div class="footerbar">
 		<p class="copyright">© <?php echo date("Y"); ?> Jamie Blomerus, All rights reserved.</p>
 		<p class="email">Email me at: <a href="mailto:jamie.blomerus@protonmail.com">jamie.blomerus@protonmail.com</a></p>
@@ -26,7 +30,7 @@
 </footer>
 
 
-</div><!-- #page -->
+</div>
 
 <?php wp_footer(); ?>
 </body>
