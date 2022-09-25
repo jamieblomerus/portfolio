@@ -14,7 +14,7 @@ document.getElementById('page').style.display = 'block';
 function visit_project(button) {
     var url = button.getAttribute('project-url');
 
-    window.location.href = url+'?utm_source=jamieblomerus&utm_medium=portfolio';
+    window.open(url+'?utm_source=jamieblomerus&utm_medium=portfolio', '_blank');
 }
 
 // Collapsible

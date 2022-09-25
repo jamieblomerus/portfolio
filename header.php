@@ -14,16 +14,17 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0,  user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<meta name="author" content="<?php get_bloginfo('name') ?>">
+	<meta name="description" content="<?php get_bloginfo('name') ?> is a swedish web developer with a keen eye for detail. Jamie's works are always visually appealing, aswell as functional.">
 
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<noscript><h2 class="js-warning">It seems like you have JavaScript disabled. This site requires JavaScript to work properly. Please enable JavaScript in your browser settings.</h2></noscript>
+<noscript><h2 class="js-warning">It seems like you have JavaScript disabled. This site requires JavaScript to work properly. Please enable JavaScript in your browser settings.</h2><footer class="smallfooter"><div class="footerbar"><p class="copyright">© <?php echo date("Y")." ".get_bloginfo('name'); ?>, All rights reserved.</p><p class="email">Email me at: <a href="mailto:jamie.blomerus@protonmail.com">jamie.blomerus@protonmail.com</a></p><p class="phone">Call me at: <a href="tel:+46735004889">+46 (0) 73 500 48 89</a></p></div></footer></noscript>
 <div id="page" class="site">
 	<? if (!is_front_page()): ?>
 		<header class="smallheader">

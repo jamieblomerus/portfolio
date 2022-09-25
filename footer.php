@@ -23,7 +23,7 @@
 <footer class="smallfooter">
 <? endif; ?>
 	<div class="footerbar">
-		<p class="copyright">© <?php echo date("Y"); ?> Jamie Blomerus, All rights reserved.</p>
+		<p class="copyright">© <?php echo date("Y")." ".get_bloginfo('name'); ?>, All rights reserved.</p>
 		<p class="email">Email me at: <a href="mailto:jamie.blomerus@protonmail.com">jamie.blomerus@protonmail.com</a></p>
 		<p class="phone">Call me at: <a href="tel:+46735004889">+46 (0) 73 500 48 89</a></p>
 	</div>

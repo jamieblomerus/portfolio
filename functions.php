@@ -124,7 +124,7 @@ add_action( 'widgets_init', 'portfolio_widgets_init' );
  */
 function portfolio_scripts() {
 	wp_enqueue_style( 'portfolio-style', get_template_directory_uri(). '/style.min.css', array(), _S_VERSION );
-	wp_enqueue_script( 'portfolio-script', get_template_directory_uri(). '/js/frontend.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'portfolio-script', get_template_directory_uri(). '/js/frontend.min.js', array(), _S_VERSION, true );
 	wp_style_add_data( 'portfolio-style', 'rtl', 'replace' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -220,7 +220,7 @@ $projects[] = array(
 );
 $projects[] = array(
     'title' => 'Will You Snail? – Swedish translation',
-    'description' => 'I helped translate the game "Will You Snail?" from English to Swedish.<br>Will You Snail? is an unique platformer where an evil AI has trapped you in one of it\'s simulation to watch you suffer for an eternity. You must escape the simulation and find a way to defeat the AI.',
+    'description' => 'I helped translate the game "Will You Snail?" from English to Swedish.<br>"Will You Snail?" is an unique platformer where an evil AI has trapped you in one of it\'s simulation to watch you suffer for an eternity. You must escape the simulation and find a way to defeat the AI.',
     'image' => get_template_directory_uri() . '/assets/images/projects/wys.jpg',
     'link' => 'https://store.steampowered.com/app/1115050/Will_You_Snail/'
 );
