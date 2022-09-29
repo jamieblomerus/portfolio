@@ -38,7 +38,7 @@ include 'header.php';
 					$image = get_template_directory_uri() . '/assets/images/profile.webp';
 				}
 				?>
-				<img src="<?php echo $image ?>" alt="">
+				<img src="<?php echo $image ?>" alt="A photo of Jamie Blomerus">
                 <div class="overlay">
                     <a href="https://github.com/jamieblomerus" title="Check out my GitHub profile" target="_blank"><i class="fa fa-github"></i></a>
                 </div>
