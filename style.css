@@ -526,15 +526,20 @@ footer.smallfooter {
 		width: 90%;
 		margin-left: 5%;
 	}
+	footer.section h2 {
+		margin-top: 0;
+	}
 	footer.section .footerbar {
 		display: block;
 		text-align: center;
+		padding-bottom: 10px;
 	}
 	footer.section .footerbar .email, footer.section .footerbar .phone {
 		position: relative;
 		left: auto;
 		right: auto;
-		font-size: small
+		font-size: small;
+		margin: 0;
 	}
 }
 @media only screen and (max-height: 700px) {
