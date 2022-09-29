@@ -404,7 +404,7 @@ footer.section form[data-status="invalid"] .wpcf7-response-output {
 	display: none;
 }
 
-footer.section .footerbar, footer.smallfooter .footerbar {
+footer .footerbar {
 	position: absolute;
 	bottom: 0;
 	background: rgb(40, 40, 42);
