@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( '_S_VERSION', '1.0.1' );
 }
 
 /**
@@ -238,4 +238,8 @@ $certifications[] = array(
 $certifications[] = array(
 	'title' => 'WordPress Skill assessment',
 	'description' => 'LinkedIn WordPress Skill assessment shows that I have a deep understanding for WordPress websites and are able to develop them according to community standards.',
+);
+$certifications[] = array(
+	'title' => 'Remote Pilot Certificate of Competency (Drone Pilot License)',
+	'description' => 'Remote Pilot Certificate of Competency shows that I have the skills and knowledge to operate a drone in a safe and legal manner. It is a requirement for drone pilots flying within the open category in Sweden and EU.\n\nThe certificate is issued by Transportstyrelsen (Swedish Transport Agency) and is valid until 2027.',
 );
