@@ -241,5 +241,5 @@ $certifications[] = array(
 );
 $certifications[] = array(
 	'title' => 'Remote Pilot Certificate of Competency (Drone Pilot License)',
-	'description' => "Remote Pilot Certificate of Competency shows that I have the skills and knowledge to operate a drone in a safe and legal manner. It is a requirement for drone pilots flying within the open category in Sweden and EU.\n\nThe certificate is issued by Transportstyrelsen (Swedish Transport Agency) and is valid until 2027.",
+	'description' => 'Remote Pilot Certificate of Competency shows that I have the skills and knowledge to operate a drone in a safe and legal manner. It is a requirement for drone pilots flying within the open category in Sweden and EU.\n\nThe certificate is issued by Transportstyrelsen (Swedish Transport Agency) and is valid until 2027.',
 );
