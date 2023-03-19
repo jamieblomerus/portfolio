@@ -5,7 +5,7 @@ include 'header.php';
 ?>
 <div data-anchor="pastprojects" class="pastprojects section">
     <h2>My past projects:</h2>
-    <p class="description">Here are some of my past projects I have been working on lately. Perhaps your project will be here too one day :).</p>
+    <p class="description">Here are some of my past projects I have been working on lately. Perhaps your project will be here too one day :)</p>
     <div class="grid-container">
         <?php
         foreach ($projects as $project) {
@@ -25,6 +25,13 @@ include 'header.php';
             <?php
         }
         ?>
+    </div>
+    <div class="contact-block">
+        <div class="content">
+            <h2>Want to work with me?</h2>
+            <p class="description">If you have a project you would like to discuss, please feel free to contact me.</p>
+            <a href="#contact" class="button">Contact me</a>
+        </div>
     </div>
 </div>
 <div data-anchor="about-me" class="about-me section">

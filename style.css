@@ -228,6 +228,37 @@ header.home .image-container img {
 	background: rgb(50, 50, 52);
 }
 
+.pastprojects .contact-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pastprojects .contact-block .content {
+	background: rgb(26, 26, 27);
+	border: 1px solid black;
+	border-radius: 15px;
+	padding: 0 10px 0 10px;
+}
+
+.pastprojects .contact-block h2 {
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin: 0 10px 0 0;
+}
+
+.pastprojects .contact-block a {
+	background: rgb(40, 40, 42);
+	border: 1px solid black;
+	border-radius: 15px;
+	color: white;
+	font-size: 1.2rem;
+	font-weight: 500;
+	padding: 10px;
+	text-decoration: none;
+	margin-left: 10px;
+}
+
 .about-me h2, .certifications h2 {
 	font-size: 2rem;
 	font-weight: 500;
