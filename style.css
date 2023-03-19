@@ -78,6 +78,7 @@ header.home .open-source a {
 header.home .row {
 	display: flex;
 	width: 100%;
+	height: 80vh;
 }
 
 header.home .row .container {
