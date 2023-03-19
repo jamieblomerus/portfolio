@@ -152,6 +152,11 @@ header.home .image-container img {
 	color: white;
 }
 
+.scroll a {
+	color: white;
+	text-decoration: none;
+}
+
 .pastprojects h2 {
 	text-align: center;
 	font-size: 3rem;

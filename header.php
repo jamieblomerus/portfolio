@@ -63,6 +63,6 @@
 				</div>
 			</div>
 		</div>
-		<p class="scroll">Scroll down<br><i class="fa fa-chevron-down"></i></p>
+		<p class="scroll">Scroll down<br><a href="#pastprojects"><i class="fa fa-chevron-down"></a></i></p>
 	</header><!-- #masthead -->
 	<? endif; ?>
