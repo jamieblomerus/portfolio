@@ -27,10 +27,10 @@ include 'header.php';
         ?>
     </div>
     <div class="contact-block">
-        <div class="content">
+        <div class="block-content">
             <h2>Want to work with me?</h2>
             <p class="description">If you have a project you would like to discuss, please feel free to contact me.</p>
-            <a href="#contact" class="button">Contact me</a>
+            <p><a href="#contact" class="button">Contact me</a></p>
         </div>
     </div>
 </div>

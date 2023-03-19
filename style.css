@@ -238,13 +238,16 @@ header.home .image-container img {
 	justify-content: center;
 	align-items: center;
 	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
-.pastprojects .contact-block .content {
+.pastprojects .contact-block .block-content {
 	background: rgb(26, 26, 27);
 	border: 1px solid black;
 	border-radius: 15px;
 	padding: 0 10px 0 10px;
+	display: flex;
+	align-items: center;
 }
 
 .pastprojects .contact-block h2 {
@@ -263,6 +266,14 @@ header.home .image-container img {
 	padding: 10px;
 	text-decoration: none;
 	margin-left: 10px;
+}
+
+.pastprojects .contact-block a:hover {
+	background: rgb(50, 50, 52);
+}
+
+.pastprojects .contact-block p a {
+	white-space: nowrap;
 }
 
 .about-me h2, .certifications h2 {
@@ -549,7 +560,13 @@ footer.smallfooter {
 	.pastprojects .grid-container .project {
 		width: 70vw;
 		height: max-content;
-		margin-bottom: 10px;
+		margin-bottom: 20px;
+	}
+	.pastprojects .contact-block .block-content {
+		width: 70vw;
+		padding-top: 10px;
+		display: block;
+		text-align: center;
 	}
 	.about-me .content, .certifications .content {
 		margin-top: 50px;
