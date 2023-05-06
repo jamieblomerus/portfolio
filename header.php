@@ -26,11 +26,11 @@
 <?php wp_body_open(); ?>
 <noscript><h2 class="js-warning">It seems like you have JavaScript disabled. This site requires JavaScript to work properly. Please enable JavaScript in your browser settings.</h2><footer class="smallfooter"><div class="footerbar"><p class="copyright">© <?php echo date("Y")." ".get_bloginfo('name'); ?>, All rights reserved.</p><p class="email">Email me at: <a href="mailto:jamie.blomerus@protonmail.com">jamie.blomerus@protonmail.com</a></p><p class="phone">Call me at: <a href="tel:+46735004889">+46 (0) 73 500 48 89</a></p></div></footer></noscript>
 <div id="page" class="site">
-	<? if (!is_front_page()): ?>
+	<?php if (!is_front_page()): ?>
 		<header class="smallheader">
 			<p><a href="<?php echo get_home_url(); ?>"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back to home</a></p>
 		</header>
-	<? else: ?>
+	<?php else: ?>
 	<header data-anchor="home" class="home section">
 		<p class="open-source"><a href="https://github.com/jamieblomerus/portfolio" title="This site is open source under GPLv3.">Source code</a></p>
 		<div class="row">
@@ -65,4 +65,4 @@
 		</div>
 		<p class="scroll">Scroll down<br><a href="#pastprojects"><i class="fa fa-chevron-down"></a></i></p>
 	</header><!-- #masthead -->
-	<? endif; ?>
+	<?php endif; ?>

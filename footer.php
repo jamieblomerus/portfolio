@@ -10,7 +10,7 @@
  */
 
 ?>
-<? if (is_front_page()): ?>
+<?php if (is_front_page()): ?>
 <footer data-anchor="contact" class="section">
     <div class="content">
         <div class="contact-form">
@@ -19,9 +19,9 @@
 			<?php get_sidebar( 'footer-cf' ); ?>
         </div>
     </div>
-<? else: ?>
+<?php else: ?>
 <footer class="smallfooter">
-<? endif; ?>
+<?php endif; ?>
 	<div class="footerbar">
 		<p class="copyright">© <?php echo date("Y")." ".get_bloginfo('name'); ?>, All rights reserved.</p>
 		<p class="email">Email me at: <a href="mailto:jamie.blomerus@protonmail.com">jamie.blomerus@protonmail.com</a></p>

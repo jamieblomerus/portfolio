@@ -9,7 +9,7 @@
 
 if ( ! is_active_sidebar( 'footer-cf' ) ): ?>
 	<p style="color: red; background-color: white;text-align: center;">There are no widgets in the footer-cf widget area.</p>
-<?else:
+<?php else:
 	dynamic_sidebar( 'footer-cf' );
 endif;
 ?>
