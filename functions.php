@@ -167,6 +167,24 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Register certification post type
+ */
+function register_certification_post_type() {
+	register_post_type(
+		'certifications',
+		array(
+		   'labels'      => array(
+			  'name'          => "Certifications",
+			  'singular_name' => "Certificate",
+		   ),
+		   'show_ui'     => true,
+		   'supports'    => ['title', 'excerpt'],
+		   'publicly_queryable' => true
+		)
+	);
+}
+add_action( 'init', 'register_certification_post_type' );
 
 /**
  * Customizer options
@@ -239,23 +257,4 @@ $projects[] = array(
     'description' => 'I helped translate the game "Will You Snail?" from English to Swedish.<br>"Will You Snail?" is an unique platformer where an evil AI has trapped you in one of it\'s simulation to watch you suffer for an eternity. You must escape the simulation and find a way to defeat the AI.',
     'image' => get_template_directory_uri() . '/assets/images/projects/wys.jpg',
     'link' => 'https://store.steampowered.com/app/1115050/Will_You_Snail/'
-);
-
-/* Certifications */
-$certifications = array();
-$certifications[] = array(
-	'title' => 'Google Workspace Sales Credential',
-	'description' => 'Google Workspace Sales Credential shows that I have the skills and knowledge to sell Google Workspace to customers. It is a certifications requirement and exclusive to Google Workspace resellers and their employees.',
-);
-$certifications[] = array(
-	'title' => 'cPanel Professional Certification (CPP)',
-	'description' => 'cPanel Professional Certification is a certification I got after successfully completing cPanel training and passing the cPanel Professional Certification exam. It shows that I have the skills and knowledge to manage cPanel and WHM servers.',
-);
-$certifications[] = array(
-	'title' => 'WordPress Skill assessment',
-	'description' => 'LinkedIn WordPress Skill assessment shows that I have a deep understanding for WordPress websites and are able to develop them according to community standards.',
-);
-$certifications[] = array(
-	'title' => 'Remote Pilot Certificate of Competency (Drone Pilot License)',
-	'description' => "Remote Pilot Certificate of Competency shows that I have the skills and knowledge to operate a drone in a safe and legal manner. It is a requirement for drone pilots flying within the open category in Sweden and EU.<br><br>The certificate is issued by Transportstyrelsen (Swedish Transport Agency) and is valid until 2027.",
 );

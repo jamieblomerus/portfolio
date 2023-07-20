@@ -69,11 +69,16 @@ include 'header.php';
         </div>
         <div class="container">
             <?php
+            $certifications = get_posts(array(
+                'post_type' => 'certifications',
+                'orderby' => 'publish_date',
+                'order' => 'ASC',
+            ));
             foreach ($certifications as $certification_item) {
                 ?>
-                <button type="button" class="collapsible"><?php echo esc_html__($certification_item['title']) ?><i class="fa fa-chevron-down"></i></button>
+                <button type="button" class="collapsible"><?php echo esc_html__($certification_item->post_title) ?><i class="fa fa-chevron-down"></i></button>
                 <div class="collapsible-content">
-                    <p><?php echo $certification_item['description'] ?></p>
+                    <p><?php echo $certification_item->post_excerpt ?></p>
                 </div>
                 <?php
             }
