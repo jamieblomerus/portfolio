@@ -74,6 +74,11 @@ include 'header.php';
                 'orderby' => 'publish_date',
                 'order' => 'ASC',
             ));
+            if (count($certifications) == 0) {
+                ?>
+                <p>You haven't added any certifications yet. Add your first one <a href="<?php echo admin_url("/post-new.php?post_type=certifications")?>">here</a></p>
+                <?php
+            }
             foreach ($certifications as $certification_item) {
                 ?>
                 <button type="button" class="collapsible"><?php echo esc_html__($certification_item->post_title) ?><i class="fa fa-chevron-down"></i></button>
