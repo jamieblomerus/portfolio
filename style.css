@@ -432,7 +432,7 @@ footer.section form .wpcf7-not-valid-tip {
 
 footer.section form p input[type="submit"] {
 	background: rgb(40, 40, 42);
-	border: 1px solid black;
+	border: 2px solid rgb(224, 224, 224);
 	border-radius: 5px;
 	color: white;
 	font-size: 1.2rem;
