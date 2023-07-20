@@ -193,6 +193,22 @@ function register_customizer( $wp_customize ) {
 		'section' => 'portfolio_options',
 		'type' => 'image',
 	)));
+
+	// Biography
+	$wp_customize->add_setting(
+		'biography',
+		array(
+			'default' => "This is your biography. You can change it through the Customizer.",
+		)
+	);
+	$wp_customize->add_control( new WP_Customize_Control( 
+		$wp_customize, 'biography', 
+			array(
+				'type' => 'textarea',
+				'section' => 'portfolio_options', 
+				'label' => 'Biography'
+			) 
+	));
 }
 add_action( 'customize_register', 'register_customizer' );
 

@@ -52,10 +52,12 @@ include 'header.php';
 			</div>
         </div>
         <div class="container">
+            <?php
+            $biography = esc_html(get_theme_mod( 'biography' ));
+            $biography = str_replace(PHP_EOL, '<br>', $biography);
+            ?>
             <h2>About me:</h2>
-            <p class="description">Jamie Blomerus is a web developer from Sweden. Jamie has been working in the web development industry for over three years. During that time, they have worked on various projects in Sweden and internationally.<br><br>
-            Jamie is a highly skilled web developer with a keen eye for detail. Their experience and skills allow them to create visually appealing websites without compromising functionality.<br><br>
-            In their free time, Jamie likes spending time with family and friends and enjoys binge-watching Netflix. Jamie is also a keen traveler and has visited various places.</p>
+            <p class="description"><?php echo $biography?></p>
         </div>
     </div>
 </div>
