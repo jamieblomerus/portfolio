@@ -581,9 +581,15 @@ footer.smallfooter {
 	footer.section .content {
 		width: 90%;
 		margin-left: 5%;
+		font-size: small;
 	}
 	footer.section h2 {
 		margin-top: 0;
+		font-size: 25px;
+	}
+	footer.section form p label {
+		font-size: 0.8rem;
+		font-weight: 200;
 	}
 	footer.section .footerbar {
 		display: block;
@@ -602,10 +608,16 @@ footer.smallfooter {
 	.pastprojects .grid-container .project .project-description {
 		font-size: 90%;
 	}
+	footer.section form p textarea {
+		height: 12vh;
+	}
 }
 @media only screen and (max-height: 650px) {
 	.pastprojects .grid-container .project .project-description {
 		font-size: 85%;
+	}
+	footer.section form p textarea {
+		height: 10vh;
 	}
 }
 
