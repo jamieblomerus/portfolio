@@ -310,7 +310,7 @@ $projects[] = array(
 );
 $projects[] = array(
 	'slug' => 'mobile-bankid-integration',
-	'title' => 'Unofficial Mobile BankID Integration for WordPress',
+	'title' => 'Mobile BankID Integration for WordPress',
 	'description' => 'I created a plugin for WordPress that allows users to login with Mobile BankID, the most common authentication method in Sweden, and prove their age on WooCommerce checkout. The plugin is available for free on <a href="https://github.com/jamieblomerus/WP-Mobile-BankID-Integration" target="_blank">GitHub</a>.',
 	'image' => get_template_directory_uri() . '/assets/images/projects/wpbankid.jpg'
 );

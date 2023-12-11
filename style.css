@@ -143,6 +143,10 @@ header.home .image-container img {
 	animation: fall-down 0.4s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
+.site-description i {
+	font-size: 0.6em;
+}
+
 .scroll {
 	position: absolute;
 	bottom: 0;
@@ -163,16 +167,22 @@ header.home .image-container img {
 	display: inline-block;
 }
 
-.about-me .section-header img {
-	/* Same as site-title */
-	width: 50px;
-}
-
 .about-me h2, .certifications h2 {
 	font-size: 48px;
 	text-transform: uppercase;
 	font-weight: 600;
 	margin: 0;
+}
+
+.about-me h2::before {
+	/* Display image before header */
+	content: "";
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background: url("./assets/images/profile.webp") no-repeat center center;
+	background-size: cover;
+	margin-right: 5px;
 }
 
 .about-me .description {

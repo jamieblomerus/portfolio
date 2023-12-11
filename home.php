@@ -12,7 +12,7 @@ include 'header.php';
             ?>
             <div class="container-content">
                 <div class="section-header">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/profile.png' ?>" alt="">
+                    <!-- <img src="<?php echo get_template_directory_uri() . '/assets/images/profile.png' ?>" alt=""> -->
                     <h2>About me</h2>
                 </div>
                 <p class="description"><?php echo $biography?></p>
@@ -40,7 +40,7 @@ include 'header.php';
             shuffle($projects);
             foreach ($projects as $project) {
                 ?>
-                <a href="#" class="item" id="project-<?php echo $project['slug'] ?>" onclick="openProject('<?php echo $project['slug'] ?>')">
+                <a href="#pastprojects" class="item" id="project-<?php echo $project['slug'] ?>" onclick="openProject('<?php echo $project['slug'] ?>')">
                     <img src="<?php echo $project['image'] ?>" alt="">
                 </a>
                 <?php
@@ -55,6 +55,9 @@ include 'header.php';
         <script>
             var currentProject = '';
             function openProject(project) {
+                if (currentProject == project) {
+                    return;
+                }
                 if (currentProject != '') {
                     document.getElementById('project-' + currentProject).classList.remove('active');
                 }

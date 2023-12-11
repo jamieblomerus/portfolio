@@ -43,7 +43,7 @@
 						$image = get_template_directory_uri() . '/assets/images/profile.png';
 					}
 					?>
-					<img src="<?php echo $image ?>" alt="">
+					<img src="<?php echo $image ?>" alt="Photography of Jamie Blomerus" draggable="false">
 				</div>
 			</div>
 			<div class="container">
@@ -56,6 +56,10 @@
 					<h1 class="site-title"><span class="fname"><?php echo $namesplit[0] ?></span><br><span class="lname"><?php echo $namesplit[1] ?></span></h1>
 					<?php
 					$portfolio_description = get_bloginfo( 'description', 'display' );
+
+					// Make everything between parentheses italic
+					$portfolio_description = preg_replace('/\(([^)]+)\)/', '<br><i>($1)</i>', $portfolio_description);
+
 					if ( $portfolio_description || is_customize_preview() ) :
 						?>
 						<p class="site-description"><?php echo $portfolio_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
