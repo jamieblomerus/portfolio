@@ -230,31 +230,87 @@ function register_customizer( $wp_customize ) {
 }
 add_action( 'customize_register', 'register_customizer' );
 
+// REST API - Get project by slug (slug is the project name)
+add_action( 'rest_api_init', function () {
+	register_rest_route( 'portfolio/v1', '/projects', array(
+		'methods' => 'GET',
+		'callback' => 'get_projects',
+	) );
+} );
+
+function get_projects( $request ) {
+	global $projects;
+	$slug = $request->get_param( 'slug' );
+	foreach ($projects as $project) {
+		if ($project['slug'] == $slug) {
+			return $project;
+		}
+	}
+	return null;
+}
+
 // CUSTOMIZATION
 
 /* Projects */
 $projects = array();
 $projects[] = array(
+	'slug' => 'wp-scrive',
 	'title' => 'WP Scrive by Webbstart',
-    'description' => 'A WordPress-plugin to simplify onboarding of new customers, by building a bridge between CMS and document signing software.',
+    'description' => 'A WordPress-plugin to simplify onboarding of new customers, by building a bridge between CMS and document signing software. The plugin was published on WordPress.org and was available for free. The plugin was later discontinued due to lack of interest.',
     'image' => get_template_directory_uri() . '/assets/images/projects/wpscrive.jpg',
     'link' => 'https://wordpress.org/plugins/wp-scrive/'
 );
 $projects[] = array(
-    'title' => 'WCAG Networks',
-    'description' => 'I implemented a new customer reference block for WCAG Networks website.<br>With these changes it became easy for the web editors to add new references to the website without manually editing the site.',
-    'image' => get_template_directory_uri() . '/assets/images/projects/wcagnetworks.jpg',
+	'slug' => 'wcagnetworks-customers',
+    'title' => 'WCAG Networks – Customer References Block',
+    'description' => 'I implemented a new customer reference block for WCAG Networks website.<br>With these changes it became easy for the web editors to add new references to the website without manually editing the site. The new block was built with Advanced Custom Fields and was fully customizable.',
+    'image' => get_template_directory_uri() . '/assets/images/projects/wcagnetworks-customers.jpg',
     'link' => 'https://www.wcagnetworks.com/'
 );
 $projects[] = array(
+	'slug' => 'webbstart',
     'title' => 'Webbstart – Digital Agency',
-    'description' => "I lead the development of a new fresh website built on WordPress and a modified version of OceanWP.<br>The new website helpt attract new optimization gigs with an fully integrated PageSpeed Insights widget and an integrated glossary.",
+    'description' => "I led the development of a new fresh website built on WordPress and a modified version of OceanWP.<br>The new website helpt attract new optimization gigs with an fully integrated PageSpeed Insights widget and glossary.",
     'image' => get_template_directory_uri() . '/assets/images/projects/webbstart.jpg',
     'link' => 'https://www.webbstart.nu/'
 );
 $projects[] = array(
+	'slug' => 'will-you-snail',
     'title' => 'Will You Snail? – Swedish translation',
     'description' => 'I helped translate the game "Will You Snail?" from English to Swedish.<br>"Will You Snail?" is an unique platformer where an evil AI has trapped you in one of it\'s simulation to watch you suffer for an eternity. You must escape the simulation and find a way to defeat the AI.',
     'image' => get_template_directory_uri() . '/assets/images/projects/wys.jpg',
     'link' => 'https://store.steampowered.com/app/1115050/Will_You_Snail/'
+);
+$projects[] = array(
+	'slug' => 'jamieblomerus',
+	'title' => 'Jamie Blomerus – Portfolio',
+	'description' => 'This website is my portfolio. It is built on WordPress and uses Fullpage.js to create a smooth scrolling experience. All the code is open source and can be found on GitHub.',
+	'image' => get_template_directory_uri() . '/assets/images/projects/jamieblomerus.png'
+);
+$projects[] = array(
+	'slug' => 'wcagnetworks',
+	'title' => 'WCAG Networks – WordPress Engineer',
+	'description' => 'I am a part of the WCAG Networks team. We help companies and organizations to make their websites accessible for everyone by providing audits and training.',
+	'image' => get_template_directory_uri() . '/assets/images/projects/wcagnetworks.jpg',
+	'link' => 'https://www.wcagnetworks.com/'
+);
+$projects[] = array(
+	'slug' => 'gagnef',
+	'title' => 'Gagnef Municipality – Event Calendar',
+	'description' => 'I helped create an event calendar for Gagnef Municipality. The calendar is built on WordPress and is integrated with Visit Dalarna\'s event calendar.',
+	'image' => get_template_directory_uri() . '/assets/images/projects/gagnef.jpg',
+	'link' => 'https://www.gagnef.se/'
+);
+$projects[] = array(
+	'slug' => 'swekaz',
+	'title' => 'Swekaz – Website reconstruction',
+	'description' => 'I helped Swekaz with a website reconstruction and migration to webhost Loopia. I reviewed the old code and fixed errors related to: <ul><li>Accessibility</li><li>Performance</li><li>SEO</li><li>Security</li></ul> I did also integrate a new webshop utilizing WooCommerce.',
+	'image' => get_template_directory_uri() . '/assets/images/projects/swekaz.jpg',
+	'link' => 'https://www.swekaz.se/'
+);
+$projects[] = array(
+	'slug' => 'mobile-bankid-integration',
+	'title' => 'Unofficial Mobile BankID Integration for WordPress',
+	'description' => 'I created a plugin for WordPress that allows users to login with Mobile BankID, the most common authentication method in Sweden, and prove their age on WooCommerce checkout. The plugin is available for free on <a href="https://github.com/jamieblomerus/WP-Mobile-BankID-Integration" target="_blank">GitHub</a>.',
+	'image' => get_template_directory_uri() . '/assets/images/projects/wpbankid.jpg'
 );

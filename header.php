@@ -35,6 +35,18 @@
 		<p class="open-source"><a href="https://github.com/jamieblomerus/portfolio" title="This site is open source under GPLv3.">Source code</a></p>
 		<div class="row">
 			<div class="container">
+				<div class="image-container">
+					<?php
+					//Get image
+					$image = esc_url(get_theme_mod('profile_image'));
+					if (empty($image)) {
+						$image = get_template_directory_uri() . '/assets/images/profile.png';
+					}
+					?>
+					<img src="<?php echo $image ?>" alt="">
+				</div>
+			</div>
+			<div class="container">
 				<div class="site-branding">
 					<?php
 					the_custom_logo();
@@ -49,18 +61,6 @@
 						<p class="site-description"><?php echo $portfolio_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 					<?php endif; ?>
 				</div><!-- .site-branding -->
-			</div>
-			<div class="container">
-				<div class="image-container">
-					<?php
-					//Get image
-					$image = esc_url(get_theme_mod('profile_image'));
-					if (empty($image)) {
-						$image = get_template_directory_uri() . '/assets/images/profile.webp';
-					}
-					?>
-					<img src="<?php echo $image ?>" alt="">
-				</div>
 			</div>
 		</div>
 		<p class="scroll">Scroll down<br><a href="#pastprojects"><i class="fa fa-chevron-down"></a></i></p>
