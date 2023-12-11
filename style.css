@@ -57,7 +57,7 @@ header {
 	display: flex;
 	width: 100vw;
 	max-width: 100%;
-	background: url("./assets/images/header-bg.png") no-repeat center center;
+	background: url("./assets/images/header-bg.webp") no-repeat center center;
 	background-size: cover;
 }
 
@@ -297,6 +297,11 @@ header.home .image-container img {
 	background: rgb(224, 224, 224);
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+.pastprojects .content #active-project a {
+	color: rgb(224, 224, 224);
+	text-decoration: underline;
 }
 
 .pastprojects .contact-block {
