@@ -67,6 +67,6 @@
 				</div><!-- .site-branding -->
 			</div>
 		</div>
-		<p class="scroll">Scroll down<br><a href="#pastprojects"><i class="fa fa-chevron-down"></a></i></p>
+		<p class="scroll">Scroll down<br><a href="#about-me"><i class="fa fa-chevron-down"></a></i></p>
 	</header><!-- #masthead -->
 	<?php endif; ?>
